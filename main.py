@@ -17,11 +17,12 @@ timer = None
 def reset():
     window.after_cancel(timer)
     timer_label.config(text="Timer")
-    canvas.itemconfig(timer_text,text="00:00")
+    canvas.itemconfig(timer_text, text="00:00")
     check_label["text"] = ""
-    global  reps,check
+    global reps, check
     reps = 0
-    check = "None"
+    check = ""
+    check_label.config(text=check)
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
